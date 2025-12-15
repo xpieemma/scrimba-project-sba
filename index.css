@@ -23,9 +23,9 @@ body,
   margin: 0 auto;
 }
 .contact-image {
-  transform: rotate(90deg);
+  transform: rotate(180deg);
   width: 900px;
-  margin-left: -60px;
+  margin-left: -10px;
 }
 .contact-form-heading {
   font-size: 3rem;
