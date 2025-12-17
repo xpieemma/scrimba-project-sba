@@ -15,7 +15,8 @@ body,
 body {
   background-color: transparent;
   background-blend-mode: darken;
-  background-image: url(images/connect.jpg);
+  /* background-image: url(images/connect.jpg); */
+  background-color: beige;
   background-size: cover;
 }
 
@@ -30,13 +31,15 @@ label {
 .contact-page {
   min-height: 100vh;
   max-width: 900px;
-  overflow: hidden;
+  overflow: auto;
   margin: 0 auto;
+  scroll-behavior: smooth;
 }
 
 .contact-form-section {
   display: flex;
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
   padding: 30px;
   margin: 0 auto;
 }
@@ -65,7 +68,7 @@ nav a:focus,
 .contact-image {
   max-width: 100%;
   height: auto;
-  display: block;
+  display: block; 
   transform: rotate(180deg);
   width: 900px;
   margin-left: -60px;
@@ -73,6 +76,7 @@ nav a:focus,
   --aspect-ratio-h: 8;
   z-index: -1;
 }
+
 
 .contact-form-heading {
   font-size: 3rem;
@@ -91,7 +95,7 @@ nav a:focus,
 }
 
 .contact-input {
-  display: block;
+  /* display: block; */
   width: 300px;
   margin: 5px auto 15px;
   border-radius: 20px;
