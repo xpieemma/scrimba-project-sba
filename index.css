@@ -31,6 +31,15 @@ label {
   margin: 0 auto;
 }
 
+nav li {
+  list-style-type: none;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
 .contact-image {
   /* max-width: 100%; */
   height: auto;
