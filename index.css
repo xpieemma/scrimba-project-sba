@@ -12,9 +12,19 @@ body,
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  background-color: transparent;
+  background-blend-mode: darken;
+  background-image: url(images/connect.jpg);
+  background-size: cover;
+}
+
 label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 1rem;
+  font-weight: 300;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color :black;
 }
 
 .contact-page {
@@ -42,15 +52,15 @@ nav ul {
 }
 
 .contact-image {
-  /* max-width: 100%; */
+   max-width: 100%; 
   height: auto;
   display: block;
   transform: rotate(180deg);
   width: 900px;
-  margin-left: -10px;
-  width: 768px;
-  --aspect-ratio-w: 4;
-  --aspect-ratio-h: 3;
+  margin-left: -60px;
+  --aspect-ratio-w: 10;
+  --aspect-ratio-h: 8;
+  z-index: -1;
 }
 
 .contact-form-heading {
@@ -61,7 +71,7 @@ nav ul {
 
 .contact-form-heading mark {
   color: #007000;
-  background-color: transparent;
+   background-color: transparent;
 }
 
 .contact-form-intro {
@@ -76,7 +86,8 @@ nav ul {
   border-radius: 20px;
   padding: 8px 20px;
   font-size: 1rem;
-  border: 2px solid #333333;
+  border: 3px solid #333333;
+  opacity: 0.5;
 }
 
 .contact-textarea {
@@ -91,6 +102,7 @@ nav ul {
   width: 100%;
   resize: vertical;
   min-height: 120px;
+  opacity: 0.9;
 }
 
 .contact-input::-webkit-input-placeholder,
