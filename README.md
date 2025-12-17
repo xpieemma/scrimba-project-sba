@@ -1,5 +1,1 @@
-Focus management is often the most challenging part of accessibility. 
-Determining which tags to use to align with HTML semantics, while ensuring a user can Tab through the site in a logical order and understand their location, requires constant testing.
-Without implementing ARIA, a blind user might not know if a form submission was successful. 
-ARIA solves a major challenge that developers face when using HTML by allowing them to make websites accessible to as many users as possible. Having technology that helps describe what is shown on the screen is vital for reaching people who rely on audio descriptions to navigate a site. 
-I consistently use WebAIM’s contrast checker to ensure scores meet WCAG AA or AAA standards, often adjusting hex codes to find the right balance between design and accessibility.
+
