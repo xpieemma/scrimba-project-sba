@@ -24,7 +24,7 @@ label {
   margin-bottom: 1rem;
   font-weight: 300;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color :black;
+  color: black;
 }
 
 .contact-page {
@@ -51,8 +51,19 @@ nav ul {
   justify-content: space-around;
 }
 
+nav a:focus,
+.contact-input:focus,
+.contact-textarea:focus,
+.contact-submit-button:focus {
+  outline: 3px solid #005FCC;
+  outline-offset: 2px;
+  box-shadow: 0 0 8px rgba(0, 95, 204, 0.5);
+  background-color: #F0F7FF;
+  opacity: 1;
+}
+
 .contact-image {
-   max-width: 100%; 
+  max-width: 100%;
   height: auto;
   display: block;
   transform: rotate(180deg);
@@ -71,7 +82,7 @@ nav ul {
 
 .contact-form-heading mark {
   color: #007000;
-   background-color: transparent;
+  background-color: transparent;
 }
 
 .contact-form-intro {
@@ -87,7 +98,7 @@ nav ul {
   padding: 8px 20px;
   font-size: 1rem;
   border: 3px solid #333333;
-  opacity: 0.5;
+  opacity: 1;
 }
 
 .contact-textarea {
@@ -102,8 +113,7 @@ nav ul {
   width: 100%;
   resize: vertical;
   min-height: 120px;
-  opacity: 0.9;
-}
+  opacity: 0.9;}
 
 .contact-input::-webkit-input-placeholder,
 .contact-textarea::-webkit-input-placeholder {
@@ -118,11 +128,16 @@ nav ul {
   width: 200px;
   cursor: pointer;
   font-family: "Poppins", sans-serif;
+  outline-color: #FFCA28;
 }
 
 .contact-submit-button:hover {
   background-color: #dddddd;
-}
+} 
+ .contact-input::placeholder,
+ .contact-textarea::placeholder{
+  color: #222222;
+ }
 
 /* 
 Challenge: Identify all accessibility issues using all your newly aquired knowledge.
