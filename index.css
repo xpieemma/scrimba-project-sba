@@ -15,7 +15,7 @@ body,
 body {
   background-color: transparent;
   background-blend-mode: darken;
-  /* background-image: url(images/connect.jpg); */
+  background-image: url(images/connect.jpg);
   background-color: beige;
   background-size: cover;
 }
