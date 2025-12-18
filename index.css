@@ -9,14 +9,14 @@ body {
 body,
 .contact-input,
 .contact-textarea {
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
   background-color: transparent;
   background-blend-mode: darken;
   background-image: url(images/connect.jpg);
-  background-color: beige;
   background-size: cover;
 }
 
@@ -32,16 +32,21 @@ label {
   min-height: 100vh;
   max-width: 900px;
   overflow: auto;
+  overflow-y: auto;
   margin: 0 auto;
   scroll-behavior: smooth;
+  padding: 0 15;
 }
 
 .contact-form-section {
   display: flex;
   width: 100%;
   max-width: 800px;
-  padding: 30px;
+  padding: 30px 0;
   margin: 0 auto;
+
+  flex-direction: column; /* change when there is small screen*/
+  align-items: center;
 }
 
 nav li {
@@ -131,7 +136,8 @@ nav a:focus,
   margin: 10px auto 0;
   width: 200px;
   cursor: pointer;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   outline-color: #FFCA28;
 }
 
@@ -141,6 +147,10 @@ nav a:focus,
  .contact-input::placeholder,
  .contact-textarea::placeholder{
   color: #222222;
+ }
+
+ @media (min-width: 768px){
+  .contact-form-section{ flex-direction: row; align-items: flex-start;}
  }
 
 /* 
