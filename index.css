@@ -5,60 +5,130 @@ body {
   line-height: 1.5;
   color: #333333;
 }
+
 body,
 .contact-input,
 .contact-textarea {
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+body {
+  background-color: transparent;
+  background-blend-mode: darken;
+  background-image: url(images/connect.jpg);
+  background-size: cover;
+}
+
+label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 300;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+}
+
 .contact-page {
   min-height: 100vh;
   max-width: 900px;
-  overflow: hidden;
+  overflow: auto;
+  overflow-y: auto;
   margin: 0 auto;
+  scroll-behavior: smooth;
+  padding: 0 15;
 }
+
 .contact-form-section {
   display: flex;
-  width: 800px;
-  padding: 30px;
+  width: 100%;
+  max-width: 800px;
+  padding: 30px 0;
   margin: 0 auto;
+
+  flex-direction: column; /* change when there is small screen*/
+  align-items: center;
 }
+
+nav li {
+  list-style-type: none;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav a:focus,
+.contact-input:focus,
+.contact-textarea:focus,
+.contact-submit-button:focus {
+  outline: 3px solid #005FCC;
+  outline-offset: 2px;
+  box-shadow: 0 0 8px rgba(0, 95, 204, 0.5);
+  background-color: #F0F7FF;
+  opacity: 1;
+}
+
 .contact-image {
+  max-width: 100%;
+  height: auto;
+  display: block; 
   transform: rotate(180deg);
   width: 900px;
-  margin-left: -10px;
+  margin-left: -60px;
+  --aspect-ratio-w: 10;
+  --aspect-ratio-h: 8;
+  z-index: -1;
 }
+
+
 .contact-form-heading {
   font-size: 3rem;
   font-weight: bold;
   margin: 0;
 }
-.contact-form-heading span {
+
+.contact-form-heading mark {
   color: #007000;
+  background-color: transparent;
 }
+
 .contact-form-intro {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin-bottom: 20px;
 }
+
 .contact-input {
-  display: block;
+  /* display: block; */
   width: 300px;
   margin: 5px auto 15px;
   border-radius: 20px;
   padding: 8px 20px;
-  font-size: 1.2rem;
-  border: 2px solid #333333;
+  font-size: 1rem;
+  border: 3px solid #333333;
+  opacity: 1;
 }
+
 .contact-textarea {
-  max-width: 300px;
+  max-width: 400px;
   margin: 5px auto 15px;
   padding: 16px 20px;
   border: 2px solid #333333;
   border-radius: 20px;
-}
+
+  /* stabilize the shape to prevent layout shift culprit  */
+  box-sizing: border-box;
+  width: 100%;
+  resize: vertical;
+  min-height: 120px;
+  opacity: 0.9;}
+
 .contact-input::-webkit-input-placeholder,
 .contact-textarea::-webkit-input-placeholder {
   color: #555555;
 }
+
 .contact-submit-button {
   border: 2px solid #333333;
   padding: 8px 20px;
@@ -66,11 +136,22 @@ body,
   margin: 10px auto 0;
   width: 200px;
   cursor: pointer;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  outline-color: #FFCA28;
 }
+
 .contact-submit-button:hover {
   background-color: #dddddd;
-}
+} 
+ .contact-input::placeholder,
+ .contact-textarea::placeholder{
+  color: #222222;
+ }
+
+ @media (min-width: 768px){
+  .contact-form-section{ flex-direction: row; align-items: flex-start;}
+ }
 
 /* 
 Challenge: Identify all accessibility issues using all your newly aquired knowledge.
