@@ -23,9 +23,9 @@ body {
 label {
   display: block;
   margin-bottom: 1rem;
-  font-weight: 300;
+  font-weight: 500;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: black;
+  color: #1a1a1a;
 }
 
 .contact-page {
@@ -35,28 +35,58 @@ label {
   overflow-y: auto;
   margin: 0 auto;
   scroll-behavior: smooth;
-  padding: 0 15;
+  padding: 0  1rem;
+}
+header {
+box-shadow: 0 2px 4px rgba(144, 238, 144, 0.5);
+border-radius: 8px;
+padding: 1rem 0;
+margin-top: 16px;
 }
 
 .contact-form-section {
   display: flex;
   width: 100%;
   max-width: 800px;
-  padding: 30px 0;
+  padding: 2rem 0;
   margin: 0 auto;
 
   flex-direction: column; /* change when there is small screen*/
   align-items: center;
+  gap: 2rem;
+  background-color: transparent;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.95);
+  border-radius: 1rem;
+  padding: 2rem;
 }
 
-nav li {
-  list-style-type: none;
-}
 
 nav ul {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  flex-direction: column;
+  gap: 8px;
+  list-style-type: none;
+  padding: auto;
+  margin: auto;
+}
+
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  padding: .5rem 1rem;
+  border-radius: .25rem;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: #e0e0e0;
+}
+nav a[aria-current="page"]{
+  font-weight: bold;
+  color: #007000;
 }
 
 nav a:focus,
@@ -67,26 +97,28 @@ nav a:focus,
   outline-offset: 2px;
   box-shadow: 0 0 8px rgba(0, 95, 204, 0.5);
   background-color: #F0F7FF;
-  opacity: 1;
+  /* opacity: 1; */
 }
+main {
+  padding: 2rem 0;
+}
+
 
 .contact-image {
   max-width: 100%;
   height: auto;
   display: block; 
   transform: rotate(180deg);
-  width: 900px;
+  width: 100%;
   margin-left: -60px;
-  --aspect-ratio-w: 10;
-  --aspect-ratio-h: 8;
-  z-index: -1;
 }
 
 
 .contact-form-heading {
   font-size: 3rem;
   font-weight: bold;
-  margin: 0;
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
 }
 
 .contact-form-heading mark {
@@ -96,7 +128,18 @@ nav a:focus,
 
 .contact-form-intro {
   font-size: 1.25rem;
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
+}
+
+.form-field {
+  margin-bottom: .5rem;
+  border: transparent;
+  border-radius: 8px;
+}
+
+input, textarea{
+box-shadow: 0 4px 6px, 
+              0 1px 3px;
 }
 
 .contact-input {
@@ -106,23 +149,32 @@ nav a:focus,
   border-radius: 20px;
   padding: 8px 20px;
   font-size: 1rem;
-  border: 3px solid #333333;
+  border: 3px solid transparent;
   opacity: 1;
 }
 
-.contact-textarea {
+ .contact-textarea {
   max-width: 400px;
-  margin: 5px auto 15px;
-  padding: 16px 20px;
-  border: 2px solid #333333;
-  border-radius: 20px;
+ margin: 8px auto 16px;
+ padding: 16px 24px; 
+border: 2px transparent #666666;
+transition: border-color 0.3s;
+border-radius: 16px;
 
   /* stabilize the shape to prevent layout shift culprit  */
   box-sizing: border-box;
   width: 100%;
+  font-size: 1rem;
   resize: vertical;
   min-height: 120px;
-  opacity: 0.9;}
+  font-family: inherit;
+  opacity: 0.9;
+}
+
+.contact-textarea:hover {
+  border-color: #333333;
+}
+
 
 .contact-input::-webkit-input-placeholder,
 .contact-textarea::-webkit-input-placeholder {
@@ -131,26 +183,61 @@ nav a:focus,
 
 .contact-submit-button {
   border: 2px solid #333333;
-  padding: 8px 20px;
-  border-radius: 40px;
-  margin: 10px auto 0;
+  padding: .75rem 1.5rem;
+  border-radius: 2rem;
+  margin: 1rem auto 0;
   width: 200px;
   cursor: pointer;
   /* font-family: "Poppins", sans-serif; */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  outline-color: #FFCA28;
+  font-size: 1rem;
+  background-color: #FF8C00;
+  transition: background-color 0.3s;
+  font-weight: 700;
 }
 
 .contact-submit-button:hover {
-  background-color: #dddddd;
+  background-color: #cecaca;
 } 
  .contact-input::placeholder,
  .contact-textarea::placeholder{
   color: #222222;
  }
 
+ #form-status {
+  display: block;
+  margin-top: 1rem;
+  padding: .75rem;
+  border-radius: .5rem;
+  text-align: center;
+  font-weight: 500;
+ }
+
+ #form-status.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+ }
+
+ #form-status.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+ }
+ #form-status:empty{
+  display: none;
+ }
+
  @media (min-width: 768px){
   .contact-form-section{ flex-direction: row; align-items: flex-start;}
+  nav ul { flex-direction: row;}
+ }
+
+ footer{
+  box-shadow: 0 2px 4px rgba(250, 240, 230, 0.5);
+  color: white;
+  text-align: center;
+  margin-top: 2rem;
  }
 
 /* 
